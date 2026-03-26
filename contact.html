@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <!-- navigation bar START -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="project.html">Project</a>
+        <a href="#" class="active">Contact</a>
+    </nav>
+    <!-- navigation bar END -->
+
+    <!-- contact page main content START -->
+    <main>
+        <div class="contactContent">
+            <div class="animation">
+                <h1>GET IN TOUCH</h1>
+                <div class="line"></div>
+                <div class="contactWays">
+                    <!-- email & socials START -->
+                    <div class="contactDetails">
+                        <div class="contactEmail">
+                            <h2>EMAIL</h2>
+                            <p>vanessawong0603@gmail.com</p>
+                        </div>
+                        <div class="contactSocials">
+                            <h2>SOCIALS</h2>
+                            <a href="https://www.linkedin.com/in/vanessa-wong-2002" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/wtvwong" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                    <!-- email & socials END -->
+                    <!-- message form START -->
+                    <div class="contactMessage">
+                        <form onsubmit="sendEmail(); reset(); return false;">
+                            <h2>DROP A MESSAGE</h2>
+                            <div class="senderDetails">
+                                <input type="text" class="formControl" id="name" placeholder="Name" required>
+                                <input type="email" class="formControl" id="email" placeholder="Email" required>
+                            </div>
+                            <div class="textareaSpace">
+                                <textarea class="formControl" id="message" placeholder="Message"></textarea>
+                            </div>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                    <!-- message form END -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- contact page main content END -->
+
+    <!-- footer START -->
+    <footer>
+        <p>Designed and coded by Vanessa &#169; 2024</p>
+    </footer>
+    <!-- footer END -->
+
+    <!-- JS files -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="Assets/js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,871 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    font-family:'Poppins', sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+html{
+    overflow-x: hidden;
+}
+a{
+    color: inherit;
+}
+body{
+    background-color: aliceblue;
+}
+::selection{
+    background: white;
+}
+.animation{     /* animation for Home, About and Contact pages */
+    animation: moving .5s ease;
+}
+@keyframes moving{
+    from{transform: translateX(50px);opacity: 0;}
+    to{transform: translateX(0px);opacity: 1;}
+}
+/* navigation bar START */
+nav{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: floralwhite;
+    text-align: center;
+    word-spacing: 60px;
+    z-index: 1;
+}
+nav a{      /* navigation bar pages */
+    font-weight: 500;
+    font-size: 15px;
+    color: floralwhite;
+    -webkit-text-stroke: 1px rgb(77, 98, 119);
+}
+nav a:hover{        /* hover effects for navigation bar pages */
+    color: rgb(77, 98, 119);
+    transition: all 0.3s ease;
+}
+nav .active{        /* applied only to active pages */
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: aliceblue;
+    color: rgb(77, 98, 119);
+    -webkit-text-stroke: 1px rgb(77, 98, 119);
+    cursor: auto;
+}
+/* navigation bar END */
+/* footer START */
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding-bottom: 5px;
+    font-size: 10px;
+    font-weight: 300;
+    color: rgb(77, 98, 119);
+}
+/* footer END */
+/* home page START */
+.homeContent{       /* position main content of Home page to the middle of the page */
+    width: 70%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.homeContent h1{
+    font-size: 30px;
+}
+.homeContent .intro{        /* greetings */
+    color: aliceblue;
+    -webkit-text-stroke: 2px rgb(77, 98, 119);
+}
+.homeContent .name{        /* name - Vanessa Wong */
+    color: rgb(77, 98, 119);
+}
+.homeContent p{        /* what I specialise in */
+    font-weight: 400;
+    color: rgb(77, 98, 119);
+}
+.homeContent .homeLinks{        /* links to About, Project and Report page */
+    justify-content: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 85px;
+}
+.homeContent a{        /* transition for links */
+    transition: all 0.3s ease;
+}
+.homeContent a:hover{        /* hover effects for link */
+    font-weight: 600;
+    text-decoration: underline;
+}
+/* home page END */
+/* about page START */
+.aboutContent{
+    color: rgb(77, 98, 119);
+}
+.aboutContent .selfImage img{        /* self image */
+    width: 180px;
+    position: absolute;
+    top: 11%;
+    right: 0%;
+    border-bottom-left-radius: 10%;
+}
+.aboutContent .about{        /* position for main content in About page */
+    width: 50%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+.aboutContent .about h1{
+    font-size: 30px;
+}
+.aboutContent .about .line{
+    width: 280px;
+    height: 3px;
+    background-color: aliceblue;
+    border: 2px solid rgb(77, 98, 119);
+}
+.aboutContent .aboutText{
+    padding-top: 20px;
+    width: 255px;
+}
+.aboutContent .aboutText p{
+    padding-left: 30px;
+    font-size: 13px;
+}
+/* music player START */
+.aboutContent h3{        /* music player title */
+    position: absolute;
+    top: 61%;
+    right: 78%;
+    font-size: 13px;
+    font-weight: 300;
+}
+.aboutContent .musicPlayer{
+    width: 330px;
+    height: 140px;
+    background: floralwhite;
+    box-shadow: rgb(99, 99, 99) 0px 2px 8px 0px;
+    border-radius: 10px;
+    position: absolute;
+    top: 70%;
+    right: 72%;
+}
+.aboutContent .musicPlayer .musicImageBox{        /* song image box */
+    width: 120px;
+    height: 120px;
+    background: white;
+    box-shadow: rgb(99, 99, 99) 0px 2px 8px 0px;
+    border-radius: 5px;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    display: flex;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+}
+.aboutContent .musicPlayer .musicImageBox .musicImage{        /* container for song image  */
+    width: 80px;
+    height: 80px;
+    box-shadow: rgba(69, 166, 155, 0.15) 0px 5px 15px 0px;
+    border-radius: 100%;
+}
+.aboutContent .musicPlayer .musicImageBox .musicImage img{        /* song image */
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.aboutContent .musicPlayer .musicImageBox .musicImage.img-rotate{        /* song image rotation animation */
+    animation: rotate 3s linear infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.aboutContent .musicPlayer .musicImageBox .centerDot{
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.aboutContent .musicPlayer .musicDetails{
+    position: absolute;
+    right: 0;
+    width: 170px;
+    height: 70px;
+    padding: 5px;
+    padding-left: 10px;
+}
+.aboutContent .musicPlayer .musicDetails .artistName{
+    font-size: 10px;
+    position: relative;
+    top: 5px;
+}
+.aboutContent .musicPlayer .musicDetails .musicName{
+    font-size: 8px;
+    white-space: nowrap;
+    margin-top: 2px;
+    position: relative;
+    top: 3px;
+}
+.aboutContent .musicPlayer .musicDetails .progressArea{
+    width: 160px;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+    margin-top: 17px;
+    cursor: pointer;
+}
+.aboutContent .musicPlayer .musicDetails .progressArea .progressBar{
+    width: 0%;
+    height: 4px;
+    background: rgb(77, 98, 119);
+    border-radius: 5px;
+}
+.aboutContent .musicPlayer .musicDetails .currentTime,
+.aboutContent .musicPlayer .musicDetails .totalTime{
+    font-size: 8px;
+    position: relative;
+    top: -5px;
+}
+.aboutContent .musicPlayer .musicDetails .totalTime{
+    left: 124px;
+}
+.aboutContent .musicPlayer .btnsBox{        /* container for play/pause, back and next buttons  */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    background: white;
+}
+.aboutContent .musicPlayer .btnsBox .btns{
+    width: 145px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+.aboutContent .musicPlayer .btnsBox .btns button{        /* play/pause, back and next buttons */
+    all: unset;
+    margin-left: 6px;
+    width: 40px;
+    height: 40px;
+    background: rgb(77, 98, 119);
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aboutContent .musicPlayer .btnsBox .btns button:nth-child(1),        /* next button */
+.aboutContent .musicPlayer .btnsBox .btns button:nth-child(3){         /* back button */
+    background: none;
+    color: rgb(77, 98, 119);
+    cursor: pointer;
+}
+.aboutContent .musicPlayer .btnsBox .btns button:nth-child(1){        /* back button */
+    position: relative;
+    left: -10px;
+}
+.aboutContent .musicPlayer .btnsBox .btns button:nth-child(3){        /* next button */
+    position: relative;
+    left: 10px;
+}
+/* music player END */
+/* about page END */
+/* experience page START */
+.experienceContent{        /* position for main content in Experience page */
+    height: 340px;
+    width: 550px;
+    background-color: floralwhite;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgb(99, 99, 99) 0px 2px 8px 0px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.experienceContent .tabBox{        /* container for EDUCATION & WORK tabs */
+    padding-bottom: 10px;
+    width: 100px;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 40px;
+}
+.experienceContent .tabBox .tabBtn{        /* EDUCATION & WORK tabs */
+    font-size: 16px;
+    font-weight: 600;
+    color: floralwhite;
+    -webkit-text-stroke: 1px rgb(77, 98, 119);
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.experienceContent .tabBox .tabBtn:hover{         /* hover effects for EDUCATION & WORK tabs */
+    color: rgb(77, 98, 119);
+    transition: all 0.3s ease;
+}
+.experienceContent .tabBox .tabBtn.active{        /* applied only to active tabs */
+    color: rgb(77, 98, 119);
+    cursor: auto;
+    transition: all 0.3s ease;
+}
+.experienceContent .line{
+    width: 550px;
+    height: 1px;
+    background-color: rgba(77, 98, 119, 0.5);
+}
+.experienceContent .textBox{        /* container for content of tabs  */
+    padding-top: 20px;
+}
+.experienceContent .textBox .text{
+    display: none;        /* hide content of inactive tab */
+    animation: moving .5s ease;        /* animation for text content in main content of Experience page */
+}
+@keyframes moving{
+    from{transform: translateX(50px);opacity: 0;}
+    to{transform: translateX(0px);opacity: 1;}
+}
+.experienceContent .textBox .text.active{        /* display content of active tab */
+    display: block;
+    text-align: left;
+}
+.experienceContent .textBox .text table tr td{
+    padding-bottom: 25px;
+}
+.experienceContent .textBox .text table tr td p{
+    color: rgb(77, 98, 119);
+}
+.experienceContent .textBox .text .year{
+    width: 75px;
+    font-size: 13px;
+}
+.experienceContent .textBox .text .type{
+    font-size: 9px;
+}
+.experienceContent .textBox .text .course,
+.experienceContent .textBox .text .company{
+    width: 270px;
+    font-weight: 700;
+    font-size: 13px;
+}
+.experienceContent .textBox .text .school,
+.experienceContent .textBox .text .position{
+    font-size: 10px;
+}
+.experienceContent .textBox .text table tr td .langauge{
+    width: 195px;
+    padding-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+.experienceContent .textBox .text table tr td .langauge p{
+    width: 40px;
+    text-align: center;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1.5px solid rgb(77, 98, 119);
+    font-size: 10px;
+}
+.experienceContent .textBox .text table tr td .tool{
+    width: 123px;
+    display: flex;
+    justify-content: space-between;
+}
+.experienceContent .textBox .text table tr td .tool p{
+    width: 40px;
+    text-align: center;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1.5px solid rgb(77, 98, 119);
+    font-size: 10px;
+}
+/* experience page END */
+/* project page START */
+.projectContent{        /* position of main content in Project page */
+    height: 380px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.projectContent .tabBox .tabBtn{        /* projects tabs */
+    width: 120px;
+    background-color: floralwhite;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: rgb(99, 99, 99) 0px 2px 8px 0px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: left;
+    color: floralwhite;
+    -webkit-text-stroke: 1px rgb(77, 98, 119);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.projectContent .tabBox .tabBtn:hover{        /* hover effects for projects tabs */
+    color: rgb(77, 98, 119);
+    transition: all 0.3s ease;
+}
+.projectContent .tabBox .tabBtn.active{        /* applied only to active tabs */
+    color: rgb(77, 98, 119);
+    cursor: auto;
+    transition: all 0.3s ease;
+}
+.projectContent .textBox{        /* container for content of tabs */
+    width: 402px;
+    background-color: floralwhite;
+    box-shadow: rgb(99, 99, 99) 0px 2px 8px 0px;
+    padding: 10px;
+    color: rgb(77, 98, 119);
+    max-height: 360px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.projectContent .textBox p{
+    font-size: 11px;
+}
+.projectContent .textBox .text{
+    display: none;        /* hide content of inactive tab */
+    animation: moving .5s ease;        /* animation for text content in main content of Project page */
+}
+@keyframes moving{
+    from{transform: translateX(50px);opacity: 0;}
+    to{transform: translateX(0px);opacity: 1;}
+}
+.projectContent .textBox .text.active{        /* display content of active tab */
+    display: block;
+    text-align: left;
+}
+.projectContent .textBox .text table td{
+    width: 223px;
+}
+.projectContent .textBox .text table .header{
+    font-weight: 700;
+}
+.projectContent .textBox .text table tr a{
+    text-decoration: underline;
+}
+.projectContent .textBox .text .explanation{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.projectContent .textBox .text .projectDetail{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.projectContent .textBox .text .projectDetail img{
+    width: 300px;
+}
+/* project page END */
+/* contact page START */
+.contactContent{        /* position of main content in Contact page */
+    width: 60%;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(77, 98, 119);
+}
+.contactContent h1{
+    text-align: left;
+    font-size: 30px;
+}
+.contactContent .line{
+    background-color: aliceblue;
+    width: 400px;
+    height: 3px;
+    border: 2px solid rgb(77, 98, 119);
+}
+.contactContent .contactWays h2{
+    font-size: 16px;
+}
+.contactContent .contactWays p{
+    font-size: 12px;
+}
+.contactContent .contactWays .contactDetails .contactSocials{
+    padding-top: 20px;
+}
+.contactContent .contactWays .contactDetails .contactSocials i{
+    padding-right: 15px;
+    padding-bottom: 20px;
+    font-size: 26px;
+}
+/* contact form START */
+.contactContent .contactWays .contactMessage form .formControl{        /* details and message inputs */
+    border-radius: 15px;
+    background-color: floralwhite;
+    border: 1px solid rgb(77, 98, 119);
+    padding: 5px;
+    font-size: 12px;
+}
+.contactContent .contactWays .contactMessage form .formControl:focus{        /* focus effect for inputs */
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+.contactContent .contactWays .contactMessage form .senderDetails{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 5px;
+    padding-bottom: 5px;
+}
+.contactContent .contactWays .contactMessage form .senderDetails input{        /* name & email inputs */
+    width: 180px;
+    height: 24px;
+}
+.contactContent .contactWays .contactMessage form .textareaSpace{
+    height: 90px;
+}
+.contactContent .contactWays .contactMessage form .textareaSpace textarea{        /* message input */
+    width: 375px;
+    min-width: 375px;
+    max-width: 375px;
+    height: 24px;
+    min-height: 24px;
+    max-height: 74px;
+}
+.contactContent .contactWays .contactMessage form button{        /* "Send Message" button" */
+    padding: 8px;
+    cursor: pointer;
+    background-color: aliceblue;
+    border: 1px solid rgb(77, 98, 119);
+    border-radius: 10px;
+    color: rgb(77, 98, 119);
+    font-size: 11px;
+    transition: all 0.3s ease;
+}
+.contactContent .contactWays .contactMessage form button:hover{        /* hover effect for "Send Message" button */
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+/* contact form END */
+/* contact page END */
+/* report page START */
+.reportContent{        /* position of main content in Report page */
+    height: 380px;
+    width: 90%;
+    color: rgb(77, 98, 119);
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.reportContent .tabBox{     /* report tabs */
+    width: 210px;
+    background-color: floralwhite;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: rgb(99, 99, 99) 0px 2px 8px 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.reportContent .tabBox p{
+    font-size: 18px;
+    font-weight: 600;
+    color: floralwhite;
+    -webkit-text-stroke: 1px rgb(77, 98, 119);
+}
+.reportContent .tabBox p:hover{       /* hover effects for report tabs */
+    color: rgb(77, 98, 119);
+    transition: all 0.3s ease;
+}
+.reportContent .textBox{        /* container for content of tabs */
+    width: 902px;
+    background-color: floralwhite;
+    box-shadow: rgb(99, 99, 99) 0px 2px 8px 0px;
+    padding: 10px;
+    max-height: 360px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.reportContent .textBox a{
+    text-decoration: underline;
+}
+.reportContent .textBox video{
+    width: 600px;
+}
+.reportContent .textBox img{
+    width: 600px;
+}
+.reportContent .textBox .websiteImages .headers,
+.reportContent .textBox .websiteImages .singleRow{
+    display: flex;
+}
+.reportContent .textBox .websiteImages .headers h2{
+    width: 475px;
+    text-align: center;
+}
+.reportContent .textBox .websiteImages h3,
+.reportContent .textBox .websiteImages h4{
+    text-align: center;
+}
+.reportContent .textBox .websiteImages .singleRow{
+    justify-content: space-between;
+}
+.reportContent .textBox .singleRow img{
+    width: 440px;
+}
+/* report page END */
+/* website's responsiveness START */
+@media (min-width: 900px){        /* when screen size is bigger than 840px */
+    nav{                          /* or in original screen size, */
+        padding-top: 37px;        /* increase website size */
+        padding-bottom: 37px;
+    }
+    nav a{
+       font-size: 25px;
+    }
+    footer{
+        font-size: 13px;
+    }
+    .homeContent h1{
+        font-size: 45px;
+    }
+    .aboutContent .selfImage img{        /* self image */
+        width: 280px;
+        top: 19%;
+    }
+    .aboutContent .about h1{
+        font-size: 45px;
+    }
+    .aboutContent .about .line{
+        width: 550px;
+    }
+    .aboutContent .aboutText{
+        width: 530px;
+    }
+    .aboutContent .aboutText p{
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .aboutContent h3{        /* music player title */
+        right: 85.5%;
+        font-size: 16px;
+    }
+    .experienceContent{        /* position for main content in Experience page */
+        width: 750px;
+    }
+    .experienceContent .tabBox .tabBtn{        /* EDUCATION & WORK tabs */
+        font-size: 18px;
+    }
+    .experienceContent .line{
+        width: 750px;
+    }
+    .experienceContent .textBox .text .year{
+        width: 120px;
+        font-size: 16px;
+    }
+    .experienceContent .textBox .text .type{
+        font-size: 10px;
+    }
+    .experienceContent .textBox .text .course,
+    .experienceContent .textBox .text .company{
+        width: 350px;
+        font-size: 16px;
+    }
+    .experienceContent .textBox .text .school,
+    .experienceContent .textBox .text .position{
+        font-size: 13px;
+    }
+    .experienceContent .textBox .text table tr td .langauge{
+        width: 272px;
+    }
+    .experienceContent .textBox .text table tr td .langauge p{
+        width: 57px;
+        font-size: 13px;
+    }
+    .experienceContent .textBox .text table tr td .tool{
+        width: 170px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .experienceContent .textBox .text table tr td .tool p{
+        width: 57px;
+        font-size: 13px;
+    }
+    .projectContent .tabBox .tabBtn{        /* projects tabs */
+        width: 230px;
+        font-size: 18px;
+    }
+    .projectContent .textBox{        /* container for content of tabs */
+        width: 902px;
+    }
+    .projectContent .textBox p{
+        font-size: 16px;
+    }
+    .projectContent .textBox .text .projectDetail img{
+        width: 600px;
+    }
+    .contactContent h1{
+        font-size: 45px;
+    }
+    .contactContent .line{
+        width: 768px;
+    }
+    .contactContent .contactWays{        /* ways to get in touch - email, socials or message */
+        width: 768px;
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 30px;
+    }
+    .contactContent .contactWays h2{
+        font-size: 20px;
+    }
+    .contactContent .contactWays p{
+        font-size: 16px;
+    }
+    .contactContent .contactWays .contactDetails .contactSocials i{
+        padding-right: 20px;
+        font-size: 30px;
+    }
+    .contactContent .contactWays .contactMessage form .formControl{        /* details and message inputs */
+        font-size: 16px;
+    }
+    .contactContent .contactWays .contactMessage form .senderDetails{
+        padding-bottom: 5px;
+    }
+    .contactContent .contactWays .contactMessage form .senderDetails input{        /* name & email inputs */
+        width: 222px;
+        height: 30px;
+    }
+    .contactContent .contactWays .contactMessage form .textareaSpace textarea{        /* message input */
+        width: 460px;
+        min-width: 460px;
+        max-width: 460px;
+        height: 30px;
+        min-height: 30px;
+        max-height: 73px;
+    }
+    .contactContent .contactWays .contactMessage form button{        /* "Send Message" button" */
+        font-size: 13px;
+    }
+}
+@media (max-width: 600px){        /* when screen size is smaller than 600px, */
+    nav{                          /* decrease website size */
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    nav a{
+       font-size: 11px;
+    }
+    .homeContent h1{
+        font-size: 19px;
+    }
+    .homeContent p{
+        font-size: 15px;
+    }
+    .aboutContent .selfImage img{        /* self image */
+        width: 150px;
+        top: 9%;
+    }
+    .aboutContent .about h1{
+        font-size: 19px;
+    }
+    .aboutContent .about .line{
+        width: 200px;
+    }
+    .aboutContent .aboutText{
+        width: 185px;
+    }
+    .aboutContent .aboutText p{
+        padding-left: 25px;
+        font-size: 11px;
+    }
+    .aboutContent h3{        /* music player title */
+        top: 64%;
+        right: 80%;
+        font-size: 10px;
+    }
+    .experienceContent{        /* position for main content in Experience page */
+        width: 450px;
+    }
+    .experienceContent .tabBox .tabBtn{        /* EDUCATION & WORK tabs */
+        font-size: 14px;
+    }
+    .experienceContent .line{
+        width: 450px;
+    }
+    .experienceContent .textBox .text .year{
+        width: 60px;
+        font-size: 10px;
+    }
+    .experienceContent .textBox .text .type{
+        font-size: 7px;
+    }
+    .experienceContent .textBox .text .course,
+    .experienceContent .textBox .text .company{
+        width: 210px;
+        font-size: 10px;
+    }
+    .experienceContent .textBox .text .school,
+    .experienceContent .textBox .text .position{
+        font-size: 8px;
+    }
+    .experienceContent .textBox .text table tr td .langauge{
+        width: 170px;
+    }
+    .experienceContent .textBox .text table tr td .langauge p{
+        width: 35px;
+        font-size: 8px;
+    }
+    .experienceContent .textBox .text table tr td .tool{
+        width: 108px;
+    }
+    .experienceContent .textBox .text table tr td .tool p{
+        width: 35px;
+        font-size: 8px;
+    }
+    .projectContent .tabBox .tabBtn{        /* projects tabs */
+        width: 90px;
+        font-size: 10px;
+    }
+    .projectContent .textBox{        /* container for content of tabs */
+        width: 342px;
+    }
+    .projectContent .textBox p{
+        font-size: 9px;
+    }
+    .projectContent .textBox .text .projectDetail img{
+        width: 237px;
+    }
+}
+/* website's responsiveness END */

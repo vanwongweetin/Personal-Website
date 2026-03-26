@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <!-- navigation bar START -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#" class="active">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="project.html">Project</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <!-- navigation bar END -->
+
+    <!-- contact page main content START -->
+    <main>
+        <div class="aboutContent">
+            <div class="selfImage">
+                <img src="Assets/images/self_image.jpg" alt="self image">
+            </div>
+            <div class="about">
+                <div class="animation">
+                    <h1>ABOUT</h1>
+                    <div class="line"></div>
+                    <!-- detailed introduction START-->
+                    <div class="aboutText">
+                        <p>Hey! I'm Vanessa  and I'm a front-end & back-end web developer, graphics designer & UI/UX designer.
+                            I enjoy designing websites and getting my creative mind running. Coding can be difficult,
+                            however, it does not compare to the sense of satisfaction and achievement after completing a whole website.
+                        </p>
+                        <br>
+                        <p>There is so much to learn about all the programming languages out there and no amount of studying 
+                            will allow me to know everything. I am always curious to learn more about new technologies and creative coding.
+                        </p>
+                    </div>
+                    <!-- detailed introduction END-->
+                </div>
+            </div>
+            <!-- music player START-->
+            <h3>current top 9 songs:</h3>
+            <div class="musicPlayer">
+                <audio src="" id="music"></audio>
+                <!-- music details START -->
+                <div class="musicDetails">
+                    <h4 class="artistName">Chappell Roan</h4>
+                    <p class="musicName">Good Luck, Babe!</p>
+                    <div class="progressArea">
+                        <div class="progressBar"></div>
+                    </div>
+                    <span class="currentTime">0:00</span>
+                    <span class="totalTime">3:38</span>
+                </div>
+                <div class="musicImageBox">
+                    <div class="centerDot"></div>
+                    <div class="musicImage">
+                        <img src="Assets/images/goodLuckBabe.jpg" alt="song image">
+                    </div>
+                </div>
+                <!-- music details END -->
+                <div class="btnsBox">
+                    <!-- play/pause, back & next buttons START -->
+                    <div class="btns">
+                        <button>
+                            <i class="material-icons fast_rewind">
+                                fast_rewind
+                            </i>
+                        </button>
+                        <button class="playPauseBtn play">
+                            <i class="material-icons">
+                                play_arrow
+                            </i>
+                        </button>
+                        <button>
+                            <i class="material-icons fast_forward">
+                                fast_forward
+                            </i>
+                        </button>
+                    </div>
+                    <!-- play/pause, back & next buttons END -->
+                </div>
+            </div>
+            <!-- music player END-->
+        </div>
+    </main>
+    <!-- contact page main content END -->
+
+    <!-- footer START -->
+    <footer>
+        <p>Designed and coded by Vanessa &#169; 2024</p>
+    </footer>
+    <!-- footer END -->
+
+    <!-- JS files -->
+    <script src="Assets/js/about.js"></script>
+    <script src="Assets/js/musicData.js"></script>
+</body>
+</html>
